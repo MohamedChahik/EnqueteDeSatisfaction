@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="utf-8">
+    <title>Questionnaire de satisfaction</title>
+    <!-- To add in order to scale the view for mobiles -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+          integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css"
+          integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+    <link rel="stylesheet" href="./Page3.css">
+    <link rel="stylesheet" href="../style.css">
+</head>
+
+<body onload="setDateVal()">
+
+<div class="bg-image"></div>
+<div class="container col-sm-7 vertical-center bg-light">
+    <div class="py-5 text-center">
+        <img class="d-block mx-auto mb-4" src="../img/fnacLogo.png" alt="" width="100" height="100">
+        <div class="col-12 text-center" style="margin-bottom:6%;">
+            <h2>Vous êtes bientôt à la fin</h2>
+            <p>Plus que deux étapes</p>
+            <a href="../Page2/Page2.html">
+                <i class="fas fa-arrow-left arrow"></i>
+            </a>
+        </div>
+
+
+        <form action='../Page4/Page4.html'>
+            <div class="progress" style="margin-bottom:6%;">
+                <div class="progress-bar progress-bar-striped bg-success" role="progressbar" style="width: 75%"
+                     aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div>
+            </div>
+            <div class="form-row">
+                <div class="form-group col-md-6">
+                    <label>Quand avez vous visiter le site de la FNAC :</label><br>
+                    <input type="text" onblur="checkDate()" name="trip-start" value="" id="datePage">
+                </div>
+                <div class="form-group col-md-6">
+                    <label>Quelles notes attribuez-vous à votre recherche :</label>
+                    <input id="note" name="text" type="text" placeholder="Notez de 1 à 10" value=''
+                           onkeyup="checkNote()" size="35">
+                </div>
+            </div>
+
+
+            <!-- // Question 2 -->
+            <div class="form-row">
+
+                <label for="httpLien">Quel marque préférez-vous dans votre magasin la FNAC, indiquez le lien de votre
+                    marque :</label>
+                <div class="input-group mb-3">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text">Lien http/https</span>
+                    </div>
+                    <input type="text" class="form-control" onblur="checkHttp()" id="httpLien" aria-describedby="basic-addon3">
+                </div>
+
+            </div>
+            <div class="form-row">
+                <div class="col-8">
+                    <button type="submit" id="button" class="btn btn-primary" onclick="return checkPage3()">Soumettre
+                    </button>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
+
+<script src="../cookies.js"></script>
+<script src="../script.js"></script>
+
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"
+        integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
+        crossorigin="anonymous"></script>
+</body>
+</html>
